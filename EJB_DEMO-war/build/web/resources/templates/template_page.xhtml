@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+
+    <h:head>
+
+        <link href="/EPSE_ERP-war/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/metisMenu.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/timeline.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/sb-admin-2.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/morris.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+       
+        <style type="text/css">
+            .table-no-select-all .ui-chkbox-all {
+                display: none !important;
+            }
+            .ui-widget-content {
+                border: none !important;
+
+            }
+            .ui-autocomplete,.ui-selectonemenu-label,.ui-selectonemenu, .ui-widget input, .ui-widget select, .ui-widget textarea{
+                width: 100% !important;
+            }
+        </style>
+
+
+        <title>EPSE </title>
+        <f:facet name="last">            
+            <h:outputScript library="js" name="bootstrap.js"/>
+            <h:outputScript library="js" name="metisMenu.min.js"/>
+            <h:outputScript library="js" name="morris.min.js"/>
+            <h:outputScript library="js" name="raphael-min.js"/>
+        </f:facet>
+    </h:head>
+    <body>
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../erpPages/hrms/HrmsDashboard.xhtml">Welcome Guest </a>
+                   
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="nav navbar-top-links navbar-right" >
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> #{headerBack.loggedName}
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li> 
+                            <h:form>
+                                <p:commandLink  id="cmdLkLogOut"  value="Logout"  >
+                                    <p:ajax  listener="#{headerBack.cmdLkLogOut_action}" resetValues="true" ></p:ajax>
+                                </p:commandLink>
+                            </h:form>
+                        </li>
+                    </ul>
+                </div>   
+                <!-- /.navbar-static-side -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+
+                        <ui:insert name="navigaion_content">navigaion_content</ui:insert>
+
+                    </div>
+                </div>
+
+            </nav>
+
+            <div id="page-wrapper">
+                <div class="divider"></div>
+                <ui:insert name="main_content">main_content</ui:insert>     
+            </div>      
+        </div>
+    </body>
+</html>

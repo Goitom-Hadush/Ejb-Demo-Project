@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="./css/layout.css"/>
+        <h:outputStylesheet name="./css/calendar.css"/>
+        
+        
+        <link href="/EPSE_ERP-war/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/metisMenu.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/timeline.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/sb-admin-2.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/morris.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <title>Template</title>
+    </h:head>
+    <h:body id="body1">
+      
+
+        <div class="page" id="page1" style="position:relative" >
+            <div id="mainHeader"  style="position:relative" >
+                <ui:include src="Header.xhtml"/>
+            </div>
+            <div id="searchArea" class="searchArea">
+                <ui:insert name="navigaion_content">navigation_content</ui:insert>
+            </div>
+
+
+            <div id="main" class="main">
+                <h:panelGrid id="main_content" styleClass="main_content">
+
+                    <ui:insert name="main_content">main_content</ui:insert>
+
+                </h:panelGrid>
+            </div>
+
+            <h:panelGrid id="bottom" styleClass="bottom" style="background-color: #074869;">
+
+                <ui:include src="Footer.xhtml"/>
+
+            </h:panelGrid>
+
+        </div>                
+
+    </h:body>
+</html>

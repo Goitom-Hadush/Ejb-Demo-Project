@@ -1,0 +1,533 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+
+    <h:head>
+
+        <link href="/EPSE_ERP-war/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/metisMenu.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/timeline.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/sb-admin-2.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/morris.css" rel="stylesheet" type="text/css"/>
+        <link href="/EPSE_ERP-war/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+        <h:outputScript library="primefaces" name="jquery/jquery.js"/>
+        <script src="/EPSE_ERP-war/resources/js/bootstrap.min.js"></script>
+
+        <style type="text/css">
+
+            .ui-widget-content {
+                border: none !important;
+
+            }
+            .ui-selectonemenu-label,.ui-selectonemenu, .ui-widget input, .ui-widget select, .ui-widget textarea{
+                width: 100% !important;
+            }
+        </style>
+
+
+        <title>EPSE </title>
+    </h:head>
+    <body>
+        <div id="wrapper">
+
+            <!-- Navigation -->
+            <!-- Navigation -->
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../papms/PAPMSDashboard.xhtml">Welcome Guest </a>
+                </div>
+                <!-- /.navbar-header -->
+
+                <div class="nav navbar-top-links navbar-right" >
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> #{headerBack.loggedName}
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li> 
+                            <h:form>
+                                <p:commandLink  id="cmdLkLogOut"  value="Logout"  >
+                                    <p:ajax  listener="#{headerBack.cmdLkLogOut_action}" resetValues="true" ></p:ajax>
+                                </p:commandLink>
+                            </h:form>
+                        </li>
+                    </ul>
+                </div>   
+                <!-- /.navbar-static-side -->
+
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li>
+
+                                <a href="../../papms/PAPMSDashboard.xhtml"><i class="fa  fa-fw"></i>Dashboard</a>
+
+                            </li>
+                            <!--  Property Administration-->
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#storeInfo">Store Information</a>
+                                        </h4>
+                                    </div>
+                                    <div id="storeInfo" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <a href="../../papms/MMS/StoreInformationReg.xhtml"><i class="fa fa-fw"></i>Store Information</a>
+                                            </li>
+                                            <li>
+                                                <a href="../../papms/MMS/LocationInformationReg.xhtml"><i class="fa fa-fw"></i>Location Registration</a>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+                                <!--  Material Catagory  -->
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#matCat">Material Catagory</a>
+                                        </h4>
+                                    </div>
+                                    <div id="matCat" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <a href="../../papms/MMS/MatCatagoryRegistration.xhtml"><i class="fa fa-fw"></i>Material Catagory</a>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+                                <!--  Material Information -->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#matInfo">Material Information</a>
+                                        </h4>
+                                    </div>
+                                    <div id="matInfo" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+
+                                                <a href="../../papms/MMS/MaterialInformation.xhtml"><i class="fa fa-fw"></i>Material Information</a>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Store Req And Issue-->
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#storeReqAndIssue">Store Req And Issue</a>
+                                        </h4>
+                                    </div>
+                                    <div id="storeReqAndIssue" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+
+                                                    <a href="../../papms/MMS/SR.xhtml"><i class="fa fa-fw"></i>Store Requisition</a>
+                                                </li>
+                                                <li>
+
+                                                    <a href="../../papms/MMS/SRApprove.xhtml"><i class="fa fa-fw"></i>Store Requisition Approve</a>
+                                                </li>
+                                                <li>
+
+                                                    <a href="../../papms/MMS/SRAutorized.xhtml"><i class="fa fa-fw"></i>Store Requisition Authorize</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/SIV.xhtml"><i class="fa fa-fw"></i>Store Issue Voucher</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/SIVApprove.xhtml"><i class="fa fa-fw"></i>SIV Approve</a>
+                                                </li> 
+                                                <li>
+                                                    <a href="../../papms/MMS/SRN.xhtml"><i class="fa fa-fw"></i>Store Return Note</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#storeReqAndIssue1">Medicine Requisition</a>
+                                        </h4>
+                                    </div>
+                                    <div id="storeReqAndIssue1" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MedicineRequisition.xhtml"><i class="fa fa-fw"></i>Medicine Requisition</a>
+                                                </li>
+
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+
+                                <!--  Material Maintenance-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#matMaintenance">Material Maintenance</a>
+                                        </h4>
+                                    </div>
+                                    <div id="matMaintenance" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MaitenanceRequisition.xhtml"><i class="fa fa-fw"></i>Maintenance Requisition</a>
+                                                </li>
+
+                                                <li>
+                                                    <a href="../../papms/MMS/MIV.xhtml"><i class="fa fa-fw"></i>Maint Issue Voucher</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MRN.xhtml"><i class="fa fa-fw"></i>Maintenance Return Note</a>
+                                                </li>
+
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+
+                                <!--  Material Maintenance-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#matTrans">Material Transfer</a>
+                                        </h4>
+                                    </div>
+                                    <div id="matTrans" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MaterialTransfer.xhtml"><i class="fa fa-fw"></i>Material Transfer</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MaterialTransferGRN.xhtml"><i class="fa fa-fw"></i>Mat Transfer Delivery Note</a>
+                                                </li>
+
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+
+
+                                <!--  Stock Information-->
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#stockInfo">Stock Information</a>
+                                        </h4>
+                                    </div>
+                                    <div id="stockInfo" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/MMS/LostFixedMaterial.xhtml"><i class="fa fa-fw"></i>Lost Fixed Material</a>
+                                                </li>
+
+                                                <li>
+
+                                                    <a href="../../papms/MMS/BinCard.xhtml"><i class="fa fa-fw"></i>Bin Card</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/StockCard.xhtml"><i class="fa fa-fw"></i>Stock Card</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MaterialStockBalance.xhtml"><i class="fa fa-fw"></i>Mat Stock Balance</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/Inventory.xhtml"><i class="fa fa-fw"></i>Inventory</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/MMS/MaterialDisposal.xhtml"><i class="fa fa-fw"></i>Material Disposal</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+                                <!--material location-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#locationManagment">Location Managment</a>
+                                        </h4>
+                                    </div>
+                                    <div id="locationManagment" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>    
+
+                                                    <a href="../../papms/MMS/LocationManagment.xhtml"><i class="fa fa-fw"></i>Location</a>
+                                                </li>
+
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  End Property Administrations-->
+
+
+                            <!-- Procurement-->
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#annDemandeAndPlan">Annual Demand And Plan</a>
+                                        </h4>
+                                    </div>
+                                    <div id="annDemandeAndPlan" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/PMS/NeedAssessment.xhtml"><i class="fa fa-fw"></i>Annual Demand Req</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/PMS/NeedAssessmentChecked.xhtml"><i class="fa fa-fw"></i>Checked Annual demand</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/PMS/PurchasePlan.xhtml"><i class="fa fa-fw"></i>Purchase Plan</a>
+                                                </li>
+                                            </li>
+                                        </div>    
+                                    </div>     
+                                </div>
+
+                                <!--  Purchase Requisition-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#purcReq">Purchase Requisition</a>
+                                        </h4>
+                                    </div>
+                                    <div id="purcReq" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>    
+                                                    <a href="../../papms/PMS/PR.xhtml"><i class="fa fa-fw"></i>PR</a>
+                                                </li>
+                                               
+                                                <li>    
+                                                    <a href="../../papms/PMS/PRCheckedBy.xhtml"><i class="fa fa-fw"></i>PR Checked by</a>
+                                                </li>
+                                                <li>    
+                                                    <a href="../../papms/PMS/PrCheckeForBgt.xhtml"><i class="fa fa-fw"></i>PR Checked For Budget</a>
+                                                </li>
+                                                 <li>    
+                                                    <a href="../../papms/PMS/PrApprove.xhtml"><i class="fa fa-fw"></i>PR Approve</a>
+                                                </li>
+                                                  <li>    
+                                                    <a href="../../papms/PMS/PrSummery.xhtml"><i class="fa fa-fw"></i>PR Summery</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Prepare Bid-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#BidInfo">Prepare Bid</a>
+                                        </h4>
+                                    </div>
+                                    <div id="BidInfo" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/PMS/TenderInformation.xhtml"><i class="fa fa-fw"></i>Bid Information </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/PMS/BidOffer.xhtml"><i class="fa fa-fw"></i>Bid Offer Information </a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Material Information-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#evalReqAndEval">Eval Req And Evaluation</a>
+                                        </h4>
+                                    </div>
+                                    <div id="evalReqAndEval" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/PMS/EvaluationReq.xhtml"><i class="fa fa-fw"></i>Evaluation Requisition </a>
+                                                </li>   
+                                                <li>
+                                                    <a href="../../papms/PMS/TechnicalEvaluation.xhtml"><i class="fa fa-fw"></i>Technical Evaluation</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/PMS/EvaluationResult.xhtml"><i class="fa fa-fw"></i>Evaluation Result</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Eval Result And Award-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#evalResAndAward">Eval Result And Award</a>
+                                        </h4>
+                                    </div>
+                                    <div id="evalResAndAward" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/PMS/QuotationRegistration.xhtml"><i class="fa fa-fw"></i>Quotation Registration</a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../papms/PMS/Award.xhtml"><i class="fa fa-fw"></i>Award</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Contract And GDN-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#contAndGDN">Contract And GDN</a>
+                                        </h4>
+                                    </div>
+                                    <div id="contAndGDN" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+
+                                                    <a href="../../papms/PMS/Contract.xhtml"><i class="fa fa-fw"></i>Contract</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/GDN.xhtml"><i class="fa fa-fw"></i>GDN</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  Inspection Req And Result-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#inspReq">Inspection Req And Result</a>
+                                        </h4>
+                                    </div>
+                                    <div id="inspReq" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>
+                                                    <a href="../../papms/PMS/InspectionRequision.xhtml"><i class="fa fa-fw"></i>Inspection Requisition</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/InspectionResult.xhtml"><i class="fa fa-fw"></i>Inspection Result</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                                <!--  GRN-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#grn">GRN And Payment</a>
+                                        </h4>
+                                    </div>
+                                    <div id="grn" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/GRN.xhtml"><i class="fa fa-fw"></i>GRN</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/GRNApprove.xhtml"><i class="fa fa-fw"></i>GRN Approve</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/PaymentRequisition.xhtml"><i class="fa fa-fw"></i>Payment Requisition</a>
+                                                </li> 
+                                                <li>  
+                                                    <a href="../../papms/PMS/PaymentRequisitionChecked.xhtml"><i class="fa fa-fw"></i>Check Payment</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/PaymentRequisitionApprove.xhtml"><i class="fa fa-fw"></i>Approve Payment</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/DirectPurchase.xhtml"><i class="fa fa-fw"></i>Direct Purchase</a>
+                                                </li>
+                                                <li>  
+                                                    <a href="../../papms/PMS/PittyCash.xhtml"><i class="fa fa-fw"></i>PittyCash Purchase</a>
+                                                </li>
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#reports">Reports</a>
+                                        </h4>
+                                    </div>
+                                    <div id="reports" class="panel-collapse collapse info">
+                                        <div class="panel-body nav">
+                                            <li>
+                                                <li>    
+                                                    <a href="../../papms/reports/ReportPage.xhtml"><i class="fa fa-fw"></i>Reports</a>
+                                                </li>
+
+                                            </li>
+                                        </div>                       
+                                    </div>
+                                </div>
+
+                            </div>                  
+                            <!-- End Training-->
+
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+            <div id="page-wrapper">
+                <div class="divider"></div>
+                <ui:insert name="main_content">main_content</ui:insert>  
+                <footer style="margin-top: "> </footer>
+            </div>  
+
+        </div>
+
+    </body>
+    <script src="http://localhost:8080/EPSE_ERP-war/resources/js/bootstrap.min.js"></script>
+</html>

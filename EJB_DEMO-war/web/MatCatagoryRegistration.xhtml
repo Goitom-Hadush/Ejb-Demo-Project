@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="resources/templates/template2.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+   
+    <ui:define name="main_content">
+        <h:form id="frmSearch">   
+            <p:panel id="searchform">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong><span></span> <h:outputLabel value="Search Material By Catagory Name" /></strong></div> 
+                    <div class="panel-body">
+                        <div class="form-horizontal  col-sm-12">
+                            <div class="form-group">   
+                                <p:outputLabel id="lblreqDep1" class="control-label col-sm-2" value="Catagory Name"/>  
+                                <div class="col-sm-10">
+                                    <p:autoComplete id="searchBymatcatNames" emptyMessage="no data" forceSelection="true" 
+                                                    style="width: 35%; background-color: #E3E3E3;  border: 1px solid #4D90FE;"
+                                                    value="#{matarialCatagoryController.materialCategory.categoryName}"
+                                                    completeMethod="#{matarialCatagoryController.searchMatCatInformation}" 
+                                                    var="catagoryInformations" itemValue="#{catagoryInformations.categoryName}" itemLabel="#{catagoryInformations}"  size="15"
+                                                    maxResults="10"> 
+
+                                        <p:ajax  event="itemSelect" listener="#{matarialCatagoryController.getMatCatInfo}" process="@this" update=":prForm" />  
+
+                                    </p:autoComplete>                            
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+
+            </p:panel>
+
+        </h:form>    
+
+
+        <h:form id="prForm" class="form-horizontal"> 
+            <p:growl id="growl1" showDetail="true"  severity="information"/>        
+            <p:panel id="basic" >
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong><span></span> <h:outputLabel value="Material Catagory Information" /></strong></div>
+                    <div class="panel-body">
+                        <div class="form-horizontal  col-sm-12">
+
+                            <div class="form-group">   
+                                <p:outputLabel id="lblreqDep" class="control-label col-sm-2" for="catcodeid" value="Catagory Code"/>  
+                                <div class="col-sm-4">
+
+                                    <p:inputText id="catcodeid" value="#{matarialCatagoryController.materialCategory.matCatCode}" 
+                                                 required="true" class="form-control"
+                                                 style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+                                    <p:message for="catcodeid" display="icon"/>
+                                </div>
+
+                            </div>
+                            <div class="form-group">   
+                                <p:outputLabel id="lblreqDep2" for="catNaneid" class="control-label col-sm-2" value="Catagory Name"/>  
+                                <div class="col-sm-4">
+
+                                    <p:inputText id="catNaneid" value="#{matarialCatagoryController.materialCategory.categoryName}" 
+                                                 required="true" class="form-control"
+                                                 style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+                                    <p:message for="catNaneid" display="icon"/>
+                                </div>
+                            </div>
+                            <div class="form-group">   
+                                <p:outputLabel id="lblreqDep1" class="control-label col-sm-2" value="Descrption"/>  
+                                <div class="col-sm-4">
+
+                                    <p:inputTextarea id="catdecid" value="#{matarialCatagoryController.materialCategory.description}" 
+                                                     class="form-control"
+                                                     style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </p:panel>
+
+            <p:panel id="pnlFixedMatTables">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong><span></span> <h:outputLabel value="Material Sub-Catagory Information" 
+                                                                                            /></strong></div>
+                    <div class="panel-body">
+                        <p:panel id="pnlTables" >
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+
+                                    <p:commandButton id="popupAdd" class="btn btn-w-md btn-info btn-direction btn-down col-md-offset-10"
+                                                     value="Add Detail"  type="button" onclick="PF('dig1').show();"   />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+
+                                    <p:dataTable paginatorPosition="bottom" paginator="true" id="tblMaterial" 
+                                                 value="#{matarialCatagoryController.papmsLuSubModel}"  
+                                                 var="matCatDtl" rowIndexVar="num"  rows="20">
+
+                                        <p:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="No"/>
+                                            </f:facet>
+                                            <h:outputText value="#{num+1}"/>
+                                        </p:column>
+
+                                        <p:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Material SubCategory"/>
+                                            </f:facet>
+                                            <h:outputText value="#{matCatDtl.subCatName}"/>
+                                        </p:column>
+
+                                        <p:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="SubCategor code"/>
+                                            </f:facet>
+                                            <h:outputText value="#{matCatDtl.matCode}"/>
+                                        </p:column>
+
+
+                                        <p:column>
+                                            <f:facet name="header">
+                                                <h:outputText value="Description"/>
+                                            </f:facet>
+                                            <h:outputText value="#{matCatDtl.description}"/>
+                                        </p:column>
+
+                                        <p:column headerText="#{msg.Option}">
+                                            <p:commandLink action="#{matarialCatagoryController.updatesubcategoryDetail()}"
+                                                           update=":prForm:dig1"
+                                                           oncomplete="PF('dig1').show();"
+                                                           process="@this"
+                                                           value="Edit">
+                                            </p:commandLink>
+                                        </p:column>
+
+                                    </p:dataTable> 
+                                </div>
+                            </div>
+                        </p:panel>
+                    </div>
+                </div>    
+            </p:panel>
+
+            <p:dialog id="dig1" header="Subcategory Detail Info" widgetVar="dig1" modal="true" showEffect="explode"
+                      style="position: absolute;">
+                <div class="form-horizontal col-sm-12">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <p:outputLabel  for="txtMaterialCode" class="control-label col-sm-3"  value="SubCategory"/>
+                            <div class="col-sm-8">
+                                <p:inputText   id="txtMaterialCode" class="form-control" style="background-color: white;  border: 1px solid 
+                                               #4D90FE;" required="true"
+                                               value="#{matarialCatagoryController.subCategory.subCatName}" 
+                                               />
+                                <p:message for="txtMaterialCode" display="icon"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p:outputLabel  for="txtSeialNo" class="control-label col-sm-3" value="SubCategory Code"/>
+                            <div class="col-sm-8">
+                                <p:inputText   id="txtSeialNo" class="form-control" style="background-color: white;  border: 1px solid 
+                                               #4D90FE;" required="true" 
+                                               value="#{matarialCatagoryController.subCategory.matCode}" />
+                                <p:message for="txtSeialNo" display="icon"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <p:outputLabel  for="txtDesc" class="control-label col-sm-3" value="Description"/>
+                            <div class="col-sm-7"> 
+                                <p:inputTextarea   id="txtDesc" class="form-control" style="background-color: white;  border: 1px solid 
+                                                   #4D90FE;" 
+                                                   value="#{matarialCatagoryController.subCategory.description}" />
+                                <p:message for="txtDesc" display="icon"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-sm-push-4">
+                        <p:commandButton value="Add" process="dig1"
+                                         update="tblMaterial,dig1" oncomplete="PF('dig1').show();"
+                                         action="#{matarialCatagoryController.addDetail()}"/>
+                    </div>
+                </div>
+
+            </p:dialog> 
+
+
+            <p:panel id="pnlsaves">
+                <div class="col-sm-8 col-sm-push-4">
+                    <p:commandButton  id="saveButton" class="btn btn-success"
+                                      value="#{matarialCatagoryController.saveorUpdateBundle}" 
+                                      action="#{matarialCatagoryController.save()}"
+                                      process="@this,basic,pnlTables,pnlFixedMatTables,tblMaterial"
+                                      update="@this,pnlFixedMatTables,pnlTables,:prForm,tblMaterial"/>
+                </div>
+            </p:panel>
+
+        </h:form>          
+    </ui:define>
+
+</ui:composition>
+
+

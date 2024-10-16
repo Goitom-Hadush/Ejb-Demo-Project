@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="resources/templates/template2.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="main_content">
+        <h:form id="frmSearch" class="form-horizontal">
+            <p:panel id="searchform">
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong><span></span> <h:outputLabel value="Search User By user Name" /></strong></div> 
+                    <div class="panel-body">
+                        <div class="form-horizontal  col-sm-12">
+                            <div class="form-group">
+                                <p:outputLabel id="lblName" class="control-label col-sm-2" value="Name"/>  
+                                <div class="col-sm-10">
+               
+                                    <p:autoComplete id="searchBbNames" emptyMessage="no data" forceSelection="true" 
+                                                    style="width: 35%; background-color: #E3E3E3;  border: 1px solid #4D90FE;"
+                                                    value="#{userController.user.FName}"
+                                                    completeMethod="#{userController.searchUserInfo}" 
+                                                    var="userInformation" itemValue="#{userInformation.FName}" itemLabel="#{userInformation}"  size="15"
+                                                    maxResults="10" > 
+
+                                        <p:ajax  event="itemSelect" listener="#{userController.getUserInfo}" process="@this" update=":userform" />  
+
+                                    </p:autoComplete>                            
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </p:panel>
+        </h:form>
+        <h:form id="userform" class="form-horizontal">
+            <p:growl id="growl1" showDetail="true"  severity="information"/>    
+              <p:panel id="basic" >
+                <div class="panel panel-info">
+                    <div class="panel-heading"><strong><span></span> <h:outputLabel value="User Information" /></strong></div>
+                    <div class="panel-body">
+                        <div class="form-horizontal  col-sm-12">
+                <div class="form-group">   
+                    <p:outputLabel id="lblreqDep2" for="catNaneid" class="control-label col-sm-2" value="Firest Name"/>  
+                    <div class="col-sm-4">
+
+                        <p:inputText id="catNaneid" value="#{userController.user.FName}" 
+                                     required="true" class="form-control"
+                                     style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+                        <p:message for="catNaneid" display="icon"/>
+                    </div>
+                </div>
+                <div class="form-group">   
+                    <p:outputLabel id="outputlblSn" for="lbfn" class="control-label col-sm-2" value="Last Name"/>  
+                    <div class="col-sm-4">
+
+                        <p:inputText id="lbfn" value="#{userController.user.LName}" 
+                                     required="true" class="form-control"
+                                     style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+                        <p:message for="lbfn" display="icon"/>
+                    </div>
+                </div>
+                <div class="form-group">   
+                    <p:outputLabel id="oupage" for="inputAg" class="control-label col-sm-2" value="age"/>  
+                    <div class="col-sm-4">
+
+                        <p:inputText id="inputAg" value="#{userController.user.age}" 
+                                     required="true" class="form-control"
+                                     style="background-color: #E3E3E3;  border: 1px solid #4D90FE;" />
+                        <p:message for="inputAg" display="icon"/>
+                    </div>
+                </div>
+                <div class="form-group">   
+                    <p:outputLabel id="lblreqDepValue" class="control-label col-sm-2" value="Birth Date"/>
+                    <div class="col-sm-4">
+
+                        <p:calendar id="birthdat" pattern="yyyy/MM/dd" 
+                                    required="true" value="#{userController.user.birthDate}"
+                                    />  
+                        <p:message for="birthdat" display="icon"/>
+                          </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p:panel>
+            <p:panel id="pnlsaves">
+                <div class="col-sm-8 col-sm-push-4">
+                    <p:commandButton  id="saveButton" class="btn btn-success"
+                                      value="#{userController.saveorUpdateBundle}" 
+                                      action="#{userController.Creat}"
+                                      process="@this,:userform"
+                                      update="@this,:userform"/>
+                </div>
+            </p:panel>
+            
+            
+        </h:form>  
+    </ui:define>
+</ui:composition>
+
+

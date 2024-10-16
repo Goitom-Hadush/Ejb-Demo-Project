@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div  xmlns="http://www.w3.org/1999/xhtml"            
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:outputStylesheet name="./css/calendar.css"/>
+    <script src="resources/script/calendar.js" type="text/javascript"/>
+
+    <h:form>
+
+        <div id="main_Headerstyle" >
+
+            <script language="javascript" type="text/javascript">
+                showCal();
+            </script>
+
+            <f:subview id="Header">
+
+                <div id="banner" class="banner">
+                    <div id="inside_banner" class="inside_banner" style="left: 1000px; color: rgb(48, 102, 130); 
+                         font-family: 'Cambria'; font-size: 11px; font-weight: bold; 
+                         height: 100%; width: 100%; ">                   
+                        <h:commandLink id="cmdLnkAm" value="Am" style=" color: black ;margin: 2px" immediate="true"  action="#{headerController.amharicAction()}"/>
+                        <h:commandLink id="cmdLnkEn" value="En" style=" color: black;margin: 2px"   immediate="true" action="#{headerController.englishAction()}"/>
+                        <br/>
+                    </div>
+                </div>
+                <div id="horizontal_menu" class="horizontal_menu">
+                    <ul class="dropdown dropdown-vertical" id="navsd" style="height: 100%">
+                        <li>
+                            <a href="../../Home.xhtml"> Home</a>
+                            <div id="horizontal_menu" class="horizontal_menu" style="width: 100%; font-size: 11px">
+                                <ul class="dropdown dropdown-vertical" id="navsd" style="height: 100%;width: 900px; margin-right: 0px">
+                                    <li style="width: 80px; margin-left: 230px">
+                                        <a href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/SprasDashboard.xhtml">Home Page</a>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comPAPMSDashboard}" 
+                                                       id="cmdLinkPAPMSDashboard" value="PAPMS Dashboard"/>
+                                    </li>
+                                    <li style="width: 90px">
+                                        <a shape="default" href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/ProductReceiptNotes.xhtml"><i class="fa fa-fw"></i> Receipt Note</a>
+                                    </li>
+
+                                    <li style="width: 90px">
+                                        <a href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/ProductReceiptLog.xhtml"><i class="fa fa-fw"></i>Receipt Log</a>
+                                    </li>
+                                    <li style="width: 110px">
+                                        <a href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/ReceiptBulkFlowMeterReading.xhtml"><i class="fa fa-fw"></i>Bulk_Flow_Meter </a>
+                                    </li>
+                                    <li style="width: 150px">
+                                        <a href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/ReceiptGateControl.xhtml"><i class="fa fa-fw"></i>Receipt_Gate_Control</a>
+                                    </li>
+                                    <li style="width: 150px">
+                                        <a href="http://192.168.110.5/EPSE_ERP-war/epsePages/spras/TankTruckOffloadingWitnessReg.xhtml"><i class="fa fa-fw"></i>OffLoading_Witness</a>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkStoreInfo}" id="cmdLinkStoreInfo" value="Store Information"/>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkLocationInfo}" id="cmdLinkLocationInfo" value="Location Information"/>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkMatInfo}" id="cmdLinkMatInfo" value="Material Information"/>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkSR}" id="cmdLinkSR" value="SR"/>
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkSIV}" id="cmdLinkSIV" value="SIV"/>
+
+                                    </li>
+                                    <li>
+                                        <p:commandLink action="#{headerController.comLinkSRN}" id="comLinkSRN" value="SRN"/>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li onmouseout="hideSubMenu('securitySubMenu');" onmouseover="displaySubMenu(this, 'securitySubMenu');">
+
+                            <h:commandLink  rendered="#{headerBack.btnStatus}" id="cmdLnkUser" value="#{headerBack.loggedName}"/>
+                            <ul id="securitySubMenu">
+                                <li>
+                                    <h:commandLink action="#{headerBack.cmdLkLogOut_action}" id="cmdLkLogOut"  value="Logout"/>
+                                </li>
+                                <li>
+                                    <h:commandLink  id="cmdLnkHelp" value="Help"/>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </f:subview>
+        </div>
+
+    </h:form>
+</div>

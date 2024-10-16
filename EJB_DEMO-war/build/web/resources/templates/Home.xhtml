@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+                 xmlns:ui="http://java.sun.com/jsf/facelets"            
+                 xmlns:h="http://java.sun.com/jsf/html"
+                 xmlns:p="http://primefaces.org/ui"
+                 xmlns:f="http://java.sun.com/jsf/core">
+
+
+
+    <html id="outputHtml1">
+
+        <h:head id="outputHead1">
+            <title>Home</title>
+            <h:outputStylesheet name="./css/navigations.css" /> 
+            
+           
+
+        </h:head >
+        <body id="body1">
+            <h:form id="formjhjkh">
+
+                <div id="main">
+                    <div class="slider-wrap">
+                        <div class="topPanel">
+                            <h:graphicImage id="FPtext1"
+                                            style="margin-left:250px; margin-top:40px; padding-top:30px; border: medium none; display: block; height:155px; width:58%; "
+                                            value="/resources/images/mukeraOne2.jpg"/>
+                        </div>
+                        <div class="csw" id="slider1">
+                            <div class="panelContainer">
+
+                                <h:panelGrid  id="panelLayout3"  styleClass="mainPannal"
+                                              style=" height: 370px; 
+                                              margin-left: 165px; margin-top: 5px; 
+                                              position: relative; 
+                                              width: 1015px; -rave-layout: grid">
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="tbl" style="height:300px;">
+                                        <tr >
+                                            <!--side navication Link -->
+                                            <td>
+                                                <div class="slider">
+                                                    <ul class="navigation">
+                                                        <li>
+                                                            <a href="#home">
+                                                                <h1 style="color: #black; font-size: 12px; ">Home </h1>
+                                                            </a>
+                                                        </li>
+
+                                                        <li >
+                                                            <a href="#Storeinfo">
+                                                                <h1 style="color: #black; font-size: 12px; ">Manage Store Info  </h1></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#bid_info">
+                                                                <h1 style="color: #black; font-size: 12px; ">manage Bid</h1></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#materrialInfo">
+                                                                <h1 style="color: #black; font-size: 12px; ">manage material transfer </h1></a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#fraud">
+                                                                <h1 style="color: #black; font-size: 12px; ">Material movement </h1></a>
+                                                        </li>
+
+
+
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <!--Project Home -->
+                                            <td>
+                                                <div class="scroll">
+                                                    <div class="scrollContainer ">
+
+                                                        <!-- tab one -->
+
+                                                        <div class="wrapper panel2" id="home">
+                                                            <div class="nav-one-for-home nav--footer">
+                                                                <table style="margin-top:9%; width:100%;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <p class="pcomon"> WELCOME TO PROPERTY ADMINISTRATION AND PROCURMENT MANAGEMENT SYSTEM  </p>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                            </div>
+                                                            <div class="nav-two nav--footer">
+
+                                                                <table>
+                                                                    <h:graphicImage id="FPtext"
+                                                                                    style="margin-left:3px; margin-top:10px; border: medium none; display: block; height:45%; width:55%;"
+                                                                                    value="/resources/images/epselogo.jpg"/>
+                                                                </table>
+
+                                                            </div>
+
+                                                        </div>                                                      
+
+
+                                                        <!-- tab one -->
+                                                        <div class="wrapper panel2" id="Storeinfo">
+                                                            <div class="topInside" >
+                                                                <div class="top-nav-left">
+                                                                    <table style="margin-top:9%; width:100%;">
+                                                                        <tr>
+                                                                            <td>
+
+                                                                                <h:graphicImage id="FPa1"
+                                                                                                style="height:92px; width:150px; border-radius: 10px 10px 10px 10px;
+                                                                                                box-shadow: 2px 3px 5px #000000; "
+                                                                                                value="/resources/images/storepic.jpg"/>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="top-nav-right">
+                                                                    <h3 style="color: #0d80f4; margin-top: -62px; margin-left:54px;">Manage Store Information</h3>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="nav-one nav--footer">
+                                                                <table class="nav nav--columns nav--top-border-off nav--footer cf">
+                                                                    <tr>
+                                                                        <td style="margin-top: -22px">
+                                                                            <h:commandLink  action="#{navigations.commandLink1_action}" id="commandLink3sss" styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;"
+                                                                                            value=" Test Link........"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink3_action}" id="commandLink3"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold; margin-top: -4px" value="Register store info"/>
+                                                                            <!--  <a   style="color: #0d80f4; font-weight: bold;" href="login.xhtml">Home</a>     -->
+
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink4_action}" id="commandLink4"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink5_action}" id="commandLink5" styleClass="nav__link"
+
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="page name goes here..."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink55_action}" id="commandLink55" styleClass="nav__link"
+
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="page name goes here..."/>
+                                                                        </td>
+                                                                    </tr>
+
+                                                                </table>
+                                                            </div>
+                                                            <div class="nav-two nav--footer">
+                                                                <table class="nav nav--columns nav--top-border-off nav--footer cf">
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLink6"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLink7"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="page name goes here..."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLink8"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink9_action}" id="commandLink9"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="... LogIn Page..."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Tab Two -->
+
+                                                        <div class="wrapper panel2" id="bid_info">
+                                                            <div class="topInside" >
+                                                                <div class="top-nav-left">
+                                                                    <table style="margin-top:9%; width:100%;">
+                                                                        <tr>
+                                                                            <td>
+
+                                                                                <h:graphicImage id="FPb1"
+                                                                                                style="height:92px; width:150px; border-radius: 10px 10px 10px 10px;
+                                                                                                box-shadow: 2px 3px 5px #000000; "
+                                                                                                value="/resources/images/Bid_Image.jpg"/>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="top-nav-right">
+                                                                    <h3 style="color: #0d80f4; margin-top: -62px; margin-left:54px;">Manage Bid Information</h3>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="nav-one nav--footer">
+                                                                <table class="nav nav--columns nav--top-border-off nav--footer cf">
+                                                                    <tr>
+                                                                        <td >
+
+                                                                            <h:commandLink action="#{Home.commandLink3_action}" id="commandLink33sss"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="register store info"/>
+
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink3_action}" id="command3Link3"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="Register store info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink4_action}" id="commandLink43"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="Register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <h:commandLink action="#{Home.commandLink5_action}" id="commandL3ink5"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="Page name ...."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="nav-two nav--footer">
+                                                                <table class="nav nav--columns nav--top-border-off nav--footer cf">
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLin3k6"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLink37"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="Page name ...."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink  id="commandLink38"
+                                                                                            styleClass="nav__link"
+                                                                                            style="color: #0d80f4; font-weight: bold;" value="register allocation Info"/>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td >
+                                                                            <h:commandLink action="#{Home.commandLink9_action}" id="commandLink39"
+                                                                                           styleClass="nav__link"
+                                                                                           style="color: #0d80f4; font-weight: bold;" value="Page name ...."/>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!--         </div>  -->
+                                </h:panelGrid>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <!-- #slider1 -->
+                        <div class="footer-line">
+                            <h:panelGrid id="mainFooter"  style="border-top: solid #214583 1px; height: 19px; width: 978px; -rave-layout: grid">
+                                <a class="foot" >
+                                    <h:outputLabel id="lblBysystem" style="color: #214583;font-weight: lighter; font-size: 12px; margin-left: 263px;" value="@ 2007 Ethiopian Calander,Information Network Security Agency-INSA"/>
+                                </a>
+                            </h:panelGrid>
+
+                        </div>
+                    </div>
+                    <!-- .slider-wrap -->
+                </div>
+            </h:form>
+        </body>
+    </html>
+</ui:composition>

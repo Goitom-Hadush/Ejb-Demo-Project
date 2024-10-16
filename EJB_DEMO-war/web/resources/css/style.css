@@ -1,0 +1,148 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 26, 2015, 10:12:34 AM
+    Author     : oneqaz
+*/
+#content .contentwrapper .heading h3 {
+    line-height: 48px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.h3, h3 {
+    font-size: 23px;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 18px;
+    margin-bottom: 9px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.1;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+    outline: 0!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+user agent stylesheeth3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+Inherited from 
+body {
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background: url(../img/patterns/5.png) repeat;
+    position: relative;
+    direction: ltr;
+}
+body {
+    font-family: "Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+
+.stats-btn {
+    text-align: center;
+    position: relative;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    padding: 5px;
+    background-image: linear-gradient(to bottom,#fff 0,#f3f3f3 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff3f3f3', GradientType=0);
+    box-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 72px;
+    display: inline-block;
+}
+.mb20 {
+    margin-bottom: 20px!important;
+}
+a {
+    background-color: transparent;
+}
+.stats-btn:after {
+    content: "";
+    width: 100%;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+* {
+    box-sizing: border-box;
+    outline: 0!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.stats-btn .notification {
+    padding: 0 6px 1px;
+    z-index: 9;
+}
+
+.notification {
+    padding: 0 7px;
+    color: #fff;
+    background: #ed7a53;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    font-family: Tahoma;
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    box-shadow: 0 1px 0 0 rgba(0,0,0,.2);
+    text-shadow: none;
+}
+* {
+    box-sizing: border-box;
+    outline: 0!important;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+a {
+    color: #39c;
+    text-decoration: none;
+}

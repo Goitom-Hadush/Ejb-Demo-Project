@@ -1,0 +1,1134 @@
+/*----------------------------------------------------------
+The base color for this template is #5c87b2. If you'd like
+to use a different color start by replacing all instances of
+#5c87b2 with your new color.
+----------------------------------------------------------*/
+body
+{
+
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    line-height: 1.28;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.infoMessage {
+    color: black;
+}
+
+.warnMessage {
+    color: orange;
+    font-weight: bold;
+}
+
+.appName{
+    height: 100%;
+}
+a:link
+{
+    color: #034af3;
+    text-decoration: none;
+}
+a:visited
+{
+    text-decoration: underline;
+    color: #006;
+    background: #6196BC;
+}
+a:hover
+{
+    text-decoration: none;
+    color: #fff;
+    background: #6196BC;
+}
+a:focus {
+    text-decoration: none;
+    color: #fff;
+    background: #6196BC;
+}
+a:active
+{
+    text-decoration: none;
+    color: #fff;
+    background: #6196BC;
+}
+
+.title_class{
+    color: #00529B;
+    font-size: 17px; 
+    left: 290px;     
+    top: 10px; 
+    position: absolute;
+}
+
+/* HEADINGS
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+h2
+{
+    padding: 0 0 0 0;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the
+page width. Or, you can specify an exact pixel width. */
+
+.page
+{
+    /* border: 2px sbox-shadow: 1px 3px 9px #666;olid #DDDDDD; */
+    box-shadow:  -15px 0 15px -15px rgba(0, 0, 0, 0.6),
+        15px 0 15px -15px rgba(0, 0, 0, 0.6);
+    background-color: #FFFFFF;
+    width: 74%;
+    margin:0 auto;
+    text-align:left;    
+    height: 990px;
+}
+
+#mainHeader
+{
+/*    // margin-bottom: -78px;*/
+    padding: 0;
+    height:15%;
+    margin-top: 0px;
+    float: top;
+}
+
+/*new for upper ,ain */
+#big_main
+{
+    /*//  overflow: hidden;*/
+    clear:right;
+    float:left;
+    width:100%;
+    height:80%;
+
+    margin-bottom:10px;
+    margin: 0px auto;
+    /*//background-color:#000000;*/
+    border-color: #000000;
+
+
+
+
+    box-shadow:
+        inset 0px 13px 8px -10px #7bb2ea,
+        inset 0px -11px 8px -10px #7bb2ea;
+
+}
+
+.navigation{
+    clear:both;
+    float: left;
+    width:210px;
+    margin-top:0px;
+    margin-bottom: 0px;
+    height:815px;
+    box-shadow: 1px 3px 9px #666;
+    margin-top: -63px;
+}
+.main
+{
+    clear:right;
+    float:right;
+    width:78%;
+    height:80%;
+    margin-top:-16px;
+    margin-right: 6px;
+    margin-bottom:0px;
+    background-color: #f8f8f8;
+    /*// background-color: #86bae9;*/
+    /*    box-shadow: 1px 3px 9px rgb(102, 102, 102);
+   
+   box-shadow: -15px 0 15px -15px rgba(0, 0, 0, 0.6),
+       15px 0 15px -15px rgba(0, 0, 0, 0.6);
+    
+    box-shadow: -15px -15px 0 -15px rgba(0, 0, 0, 0.6),
+        15px 0 15px -15px rgba(0, 0, 0, 0.6);
+    */
+}
+
+.main_content{    
+    z-index: 0; 
+    overflow: hidden;
+    border: 1px solid #86bae9; 
+    height: 790px; 
+    /*// left: -9px;*/ 
+    width: 99%;
+    margin-bottom: 0px; 
+    position: relative; 
+
+    margin: 0px auto;
+    margin-top: 0px;
+   background-color: #f8f8f8;
+  /*// background-color: #ffffff;*/
+
+}
+#searchArea{     
+    float: left;
+    width:20%;
+    height: 790px;
+    list-style: none;
+    margin-top:-16px;
+    padding: 4px;
+    border-color: #86bae9;
+    background-color: #f8f8f8;
+   /*// background-color: #ffffff;*/
+
+    box-shadow: -15px -15px 0 -15px rgba(0, 0, 0, 0.4),
+        15px 0 15px -15px rgba(0, 0, 0, 0.6);
+
+}
+div#divSideMenu label  {
+    background-color: #EFECEC;
+    border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #33338C;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    width:90%;
+    line-height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+}
+
+div#divSideMenu a  {
+    background-color: #FFFFFF;
+    width:90%;
+    border-color: #FFFFFF #DDDDDD #DDDDDD #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #0070BA;
+    text-decoration: none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 22px;
+    padding-left: 20px;
+    text-align: left;
+}
+.message
+{
+    clear:right;
+    float:right;
+    width:800px;
+    height:42px;
+}
+.infoMesg, .successMesg, .warnMesg, .errorMesg
+{
+    width:740px;
+    height:32px;
+    padding-left:35px;
+    margin:5px;
+    border: 1px solid;
+    text-align:center;
+    background-repeat:no-repeat;
+}
+.infoMesg{
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url(../resources/images/info.png);
+}
+.successMesg
+{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image: url(../resources/images/success.png);
+}
+.warnMesg
+{
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url(../resources/images/warning.png);
+}
+.errorMesg
+{
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url(../resources/images/errorMsg.png);
+    color: red;
+}
+.validation {
+    color: #D63301;
+    background-color: #FFCCBA;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+.errorMessage {
+    color: red;
+    padding-left:20px;
+    background-image: url("../images/mainbk.png");
+    background-repeat:no-repeat;
+    width:200px;
+    height:auto;
+    font-size: 9px;
+}
+.fatalMessage {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+.errorFieldIndicator{
+    border: 1px solid #ff3333;
+    background-color: #ffcccc;
+}
+.validFieldIndicator{
+    border: 1px solid #A9A9A9;
+    background-color: #FFFFFF;
+}
+
+/* FORM LAYOUT ELEMENTS
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0;
+    padding: 1em;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+label {
+    color: #666666;
+    cursor: pointer;
+    font-weight: bold;
+    vertical-align: middle;
+
+}
+
+.iceInpTxt, .iceSelInpTxtTxt,.iceInpTxtArea :first-letter {
+    text-transform: capitalize;
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="textarea"]:hover
+{
+    border:1px solid #FEE620;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="textarea"]:focus
+{
+    border:1px solid #4D90FE;
+}
+
+/* TABLE
+----------------------------------------------------------*/
+
+table
+{
+    border-collapse: collapse;
+}
+
+table td
+{
+    padding: 5px;
+
+}
+
+table th
+{
+    padding: 6px 5px;
+    text-align: left;
+    background-color: #e8eef4;
+    border: solid 1px #e8eef4;
+}
+.table_container{
+    overflow:scroll;
+}
+
+/*---------- Footer ----------  */ 
+
+#bottom {
+    position: relative;
+    background: url(../images/background.jpg);
+    padding: 2px;
+    margin: 0px 0px 0px 0px;
+    font-family: Arial,Helvetica,sans-serif;
+    height: 30px;
+    color: white;
+    width: 1008px;
+}
+#footertextleft {
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+    width: 450px;
+}
+#footertextright {
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    width: 350px;
+}
+
+
+/*// -----header------------*/
+
+
+
+body, table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95em;
+    color: #000000;
+}
+
+
+.utility{
+    font: 75% Verdana,sans-serif;
+    position: relative;
+    top: 30px;
+    color: #919999;
+    width:400px;
+    left:730px;
+}
+
+.utility #amharic a{
+    color: #074869;
+    text-decoration: none;
+    font-family:Narkisim;
+    background:transparent url('resources/images/et.gif');
+    font-size:14px;
+}
+
+.utility a:hover{
+    text-decoration: underline;
+}
+
+.skipLinks {}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+
+
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.dropdown {
+    position: relative;
+    z-index: 597;
+    float: left;
+}
+
+ul.dropdown li {
+    float: left;
+    line-height: 1.3em;
+    vertical-align:middle;
+}
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+
+ul.dropdown ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+    width: 100%;
+
+}
+
+ul.dropdown ul li {
+    float: none;
+
+}
+
+ul.dropdown ul ul {
+    top: 1px;
+    left: 99%;
+}
+
+ul.dropdown li:hover > ul {
+    visibility: visible;
+}
+
+ul.dropdown-linear {
+    width: 100%;
+}
+
+ul.dropdown-linear ul li {
+    float: left;
+
+}
+
+ul.dropdown-linear li.hover,
+ul.dropdown-linear li:hover {
+    position: static;
+}
+
+ul.dropdown-linear ul ul {
+    display: none !important;
+}
+
+
+ul.dropdown {
+    padding-bottom: 1px;
+    font-family:Narkisim;
+    font-weight:bold;
+    font-size:14px;
+}
+
+ul.dropdown li {
+
+    color: white;
+
+}
+ul.dropdown  li span{
+
+    color: white;
+    width:100px
+
+}
+ul.dropdown  li a{
+
+    color: white;
+    width:100px
+
+}
+
+
+
+ul.dropdown a:link,
+ul.dropdown a:visited	{
+    color: white; text-decoration: none;
+}
+ul.dropdown a:hover
+{ color: white; text-decoration: none;
+
+}
+ul.dropdown a:active	{
+    color: green;
+}
+
+
+/* -- level mark -- */
+
+ul.dropdown ul {
+    width: 150px;
+    padding: 3px 6px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:#074869;
+    background-color: #fff;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+ul.dropdown ul li {
+    color: red;
+    width:120px
+}
+
+
+
+/*-------------------------------------------------/
+* @section		Support Class `dir`
+* @level sep	ul, .class
+*/
+
+ul.dropdown *.dir {
+    padding-right: 5px;
+    background-image: url(images/nav-arrow-down.png);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-vertical ul {
+    top: 0;
+    left: 100%;
+}
+
+ul.dropdown-vertical-rtl ul {
+    right: 100%;
+}
+
+ul.dropdown-horizontal,
+ul.dropdown-linear,
+ul.dropdown-upward {
+    width: 100%;
+}
+
+ul.dropdown-horizontal ul *.dir {
+    padding-right: 5px;
+    background-image: url(images/nav-arrow-right.png);
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+    background-image: url(images/nav-arrow-up.png);
+}
+
+ul.dropdown-vertical *.dir {
+    background-image: url(images/nav-arrow-right.png);
+    background-position: 180px 50%;
+}
+
+ul.dropdown-vertical ul *.dir,
+ul.dropdown-upward ul *.dir {
+    background-image: url(images/nav-arrow-right.png);
+    background-position: 100% 50%;
+}
+
+ul.dropdown-vertical-rtl *.dir {
+    padding-right: 6px;
+    padding-left: 5px;
+    background-image: url(images/nav-arrow-left.png);
+    background-position: 5px 50%;
+}
+
+ul.dropdown-vertical-rtl ul *.dir {
+    padding-right: 0;
+    background-image: url(images/nav-arrow-left.png);
+    background-position: 0 50%;
+}
+
+
+/*-------------------------------------------------/
+* @section		Base Style Extension
+*/
+
+ul.dropdown a,
+ul.dropdown span {
+    display: block;
+    padding: 4px 6px;
+}
+
+ul.dropdown ul a,
+ul.dropdown ul span {
+    padding: 4px 0;
+}
+
+
+/*-------------------------------------------------/
+* @section		Base Style Override
+*/
+
+ul.dropdown li {
+    padding: 0;
+    border: none;
+}
+
+
+/*-------------------------------------------------/
+*	@section	Custom Styles
+*/
+
+ul.dropdown li a,
+ul.dropdown *.dir {
+
+    border-left: 1px solid white;
+
+}
+
+ul.dropdown ul li a,
+ul.dropdown ul *.dir {
+    border: none;
+}
+
+
+ul.dropdown-vertical li a,
+ul.dropdown-vertical *.dir {
+    border-width: 1px 0 1px 1px;
+}
+
+ul.dropdown-vertical-rtl li a,
+ul.dropdown-vertical-rtl *.dir {
+    border-width: 1px 1px 1px 0;
+}
+
+
+/*-------------------------------------------------/
+* @section		Support Class `open` Usage
+* @source		js, artificial
+*
+*/
+
+ul.dropdown li.hover *.open {
+    position: relative;
+    z-index: 600;
+    margin: -1px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: #f0f0f0 #666 #666 #f0f0f0;
+    background-color: red;
+    color: #0063dc;
+
+}
+
+ul.dropdown-horizontal li.hover *.open,
+ul.dropdown-upward li.hover *.open,
+ul.dropdown-linear li.hover *.open {
+    float: left;
+
+}
+
+ul.dropdown-vertical li.hover *.open {
+    margin: 0 -1px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+}
+
+ul.dropdown-vertical-rtl li.hover *.open {
+    padding-right: 7px;
+}
+
+ul.dropdown-vertical ul li.hover *.open {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+ul.dropdown ul li.hover *.open {
+    position: static;
+    z-index: 0;
+    float: none;
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+}
+
+
+
+
+/* CSS2 clone */
+
+ul.dropdown li:hover > *.dir {
+    position: relative;
+    z-index: 600;
+    margin: -1px 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: green;
+    color:orange;
+
+}
+ul.dropdown li a:hover{
+    color:orange;
+}
+ul.dropdown-horizontal li:hover > *.dir,
+ul.dropdown-upward li:hover > *.dir,
+ul.dropdown-linear li:hover > *.dir {
+    float: left;
+}
+
+ul.dropdown-vertical li:hover > *.dir {
+    margin: 0 -1px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 7px;
+}
+
+ul.dropdown-vertical-rtl li:hover > *.dir {
+    padding-right: 7px;
+}
+
+ul.dropdown-vertical ul li:hover > *.dir {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+ul.dropdown ul li:hover > *.dir {
+    position: static;
+    z-index: 0;
+    float: none;
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+}
+
+ul.dropdown ul li:hover > *.dir,
+ul.dropdown-vertical li:hover > *.dir {
+    background-image: url(images/nav-arrow-right-open.png);
+}
+
+ul.dropdown-vertical-rtl li:hover > *.dir,
+ul.dropdown-vertical-rtl ul li:hover > *.dir {
+    background-image: url(images/nav-arrow-left-open.png);
+}
+
+ul.dropdown-upward li:hover > *.dir {
+    background-image: url(images/nav-arrow-up-open.png);
+}
+
+ul.dropdown-upward ul li:hover > *.dir {
+    background-image: url(images/nav-arrow-right-open.png);
+}
+
+
+
+ul.dropdown {
+    width: 100%;
+}
+
+ul.dropdown li.divider {
+    border: none;
+}
+
+ul.dropdown ul {
+    width: 100%;
+    margin-top: -1px;
+    padding: 3px 0;
+}
+
+* html ul.dropdown ul {
+    margin-top: 0;
+    width: 760px;
+}
+
+ul.dropdown ul li {
+    background: url(images/pattern2.png) 100% 0 repeat-y;
+}
+
+ul.dropdown ul li.last {
+    background: none;
+}
+
+ul.dropdown ul a {
+    padding: 4px 6px !important;
+}
+
+
+ul.dropdown ul *.dir,
+ul.dropdown ul a.dir:hover {
+    padding-right: 0;
+    background: none !important;
+}
+
+ul.dropdown ul span.dir {
+    display: none; /* to-do: consider moving to abstract */
+}
+
+/************** ++++++++++++++++++++++++  end of  header tag styles +++++++++++++++++++++++**************/
+/*
+Document   : TEMPLATE_CSS
+Created on : Feb 15, 2010, 1:16:14 AM
+Author     : DavePro
+E-Mail: daveprolife@gmail.com
+Description:
+This template is designed for Human Resource Management System Entranet web based Application.
+*/
+
+root {
+    display: block;
+}
+* { padding: 0 ; margin: 0 auto; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align:center;
+}
+.whole_page{
+    margin: 0 auto;
+    margin-top:0px;
+    text-align:left;
+}
+.header {
+    margin: 0 auto;
+    color: #333;
+    width: 100%;
+}
+.left_menu{
+    top:20px;
+    color: #333;
+    border-right: 1px solid #176674;
+    background:none;
+    height:auto;
+
+}
+.list_menu{
+    border:1px solid #ccc;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    margin-top:5px;
+    margin-left:5px;
+    margin-bottom:5px;
+}
+
+/*Components css */
+/*
+* After modifying this style sheet, refresh the page being designed to see the effect of the modification.
+* Click the Refresh button in the Visual Designer toolbar to refresh the page.
+*/
+
+/* Style rules to make Java Server faces Standarad data tables look better */
+
+/*end of printing style*/
+/*
+end of calendar
+*/
+
+/*Custom CSS's'*/
+
+select {
+    /* id want to change the opacity of the background
+    filter: alpha(opacity=100);
+    opacity:0.5;*/
+
+    /*use this if you want change the corners to round
+    */
+    border: 1px solid #ABABAB;
+    /* background-color: rgb(242, 246, 240);*/
+    margin: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    padding: 3px;
+    /*border: solid 1px #73b3ce;*/
+    min-width:144px;
+}
+select:focus {
+    /* id want to change the opacity of the background
+    filter: alpha(opacity=50);
+    opacity:1.0;*/
+    background-color:white;
+    /*use this if you want change the corners to round*/
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    padding: 3px;
+    border: solid 1px #4690d6;
+}
+
+
+
+input[type="password"] {
+    border: 1px solid #ABABAB;
+    background-color: black;
+    margin: 2px;
+    padding: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+input[type="text"] {
+    border: 1px solid #ABABAB;
+    background-color: rgb(242, 246, 240);
+    margin: 2px;
+    padding: 2px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+textarea {
+    border: solid 1px #73b3ce;
+    color:#333333;
+}
+
+textarea:focus,input[type="password"]:focus, input[type="text"]:focus {
+    border: solid 1px #4690d6;
+    background: white;
+    color:#333333;
+}
+input[type="submit"]{
+    font: 12px/100% Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #074869;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    padding: 2px 6px 2px 6px;
+    margin:10px 0 10px 0;
+    cursor: pointer;
+}
+/*Form Css*/
+.legend_css
+{
+    letter-spacing:0.1em;
+    font-size:0.8em;
+    font-family:sans-serif;
+    text-transform:uppercase;
+    background:#F5F5F5;
+    padding-left:15px;
+    padding-right:15px;
+    padding-bottom:5px;
+    margin-left:-1px;
+    padding-top:5px;
+    margin-bottom:25px;
+    border-top:1px solid #ccc;
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+}
+.filedset_css
+{
+    background:url("./images/contentContainer_bg.gif") repeat-x scroll left top transparent;
+    height: 300px;
+    width:100%;
+    left:0px;
+    top: 5px;
+    position: absolute;
+    border:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:5px;
+}
+.filedset_border{
+    height: 305px;
+    width:745px;
+    border:10px solid #F5F5F5;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+
+}
+.popUp_Body_Border{
+    border:10px solid #F5F5F5;
+    margin-left:10px;
+    margin-right:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+.collabsable_bg{
+    background:url("./images/contentContainer_bg.gif") repeat-x scroll bottom  transparent;
+    height: 305px;
+    width:100%;
+    border:1px solid #176674;
+
+}
+/*Status*/
+.coulamTop1 {
+    background:url("./images/pic1top.jpg") no-repeat scroll left top transparent;
+    height:93px;
+    width:190px;
+}
+.coulamMid1 {
+    background:url("./images/coulammid1.jpg") repeat-y scroll 0 0 transparent;
+    width:190px;
+    height:40px;
+}
+.coulamBottom1 {
+    background:url("./images/pic1bottom.jpg") no-repeat scroll left bottom transparent;
+    height:55px;
+    width:190px;
+}
+/*Colabseble CSS*/
+.col_Header{
+    background-color:#F9F9F9;
+    border-bottom:1px solid #CCCCCC;
+    font-size:15px;
+    padding:7px;
+}
+/* AUTOCOMPLETE EXAMPLE */
+
+.fullNameCol {
+    width:350px;
+}
+.empIdCol {
+    width: 100px;
+}
+.rowSelectedCSS{
+    background-color:gray;
+}
+
+
+
+#banner {
+    
+  /*//background:transparent url("../images/eepcom_11.jpg")  no-repeat ;*/
+/*   background:transparent url("/EPSE_ERP-war/resources/images/eepcom.jpg")  no-repeat ;*/
+background:transparent url("/EPSE_ERP-war/resources/images/EPSE-PSD-1.png")  no-repeat ;
+    height:68%;
+    width:100%;
+    top:0px;
+    float: top;
+    
+    /*//background-image: url("../images/eepcom.jpg");*/
+    
+
+
+    background-size:100% 100%;
+    background-position:center; /* IE fix */
+}
+
+.horizontal_menu
+{
+    position:relative;
+
+    border-bottom:1px solid gray;
+   
+    /*//background: #074869;*/
+    background: #66a8f3;
+  /*// background: #46629e;*/
+    
+    height:16.5%;
+    width: 100%;
+    float: top;
+    
+
+}
+
+body, table {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95em;
+    color: #000000;
+}
+.table-no-select-all .ui-chkbox-all {
+     display: none !important;
+}
